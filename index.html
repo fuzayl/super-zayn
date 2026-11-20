@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Super Zayn va Chaqmoq</title>
+<meta name="description" content="Zayn haqida oilaviy multfilm — barcha qismlar">
+<meta property="og:title" content="Super Zayn va Chaqmoq">
+<meta property="og:description" content="Zayn haqida oilaviy multfilm — barcha qismlar">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚡%3C/text%3E%3C/svg%3E">
+<style>
+@font-face{font-family:'Baloo';src:url(fonts/baloo2-latin.woff2) format('woff2');font-weight:400 800;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Baloo';src:url(fonts/baloo2-latinext.woff2) format('woff2');font-weight:400 800;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+2C60-2C7F,U+A720-A7FF}
+:root{--bg:#fff8ef;--bg2:#eaf4ff;--card:#ffffff;--ink:#1d1a2e;--muted:#5d5a75;--red:#e8322f;--blue:#1d4ed8;--gold:#ffd23f;--on:#1d1a2e;--line:#efe6da}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);color-scheme:light}
+body{font-family:'Baloo',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;color:var(--on);background:radial-gradient(1100px 600px at 50% -15%,#dcecff 0%,var(--bg2) 35%,var(--bg) 80%) fixed;min-height:100vh;line-height:1.4;-webkit-font-smoothing:antialiased}
+.stars{position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(6px 6px at 8% 22%,#ffd23f99,transparent 60%),radial-gradient(5px 5px at 92% 18%,#e8322f66,transparent 60%),radial-gradient(6px 6px at 4% 70%,#1d4ed855,transparent 60%),radial-gradient(5px 5px at 96% 64%,#ffd23f88,transparent 60%),radial-gradient(4px 4px at 50% 96%,#e8322f55,transparent 60%);opacity:.9}
+.wrap{position:relative;max-width:1120px;margin:0 auto;padding:0 16px}
+header.hero{position:relative;margin:16px auto 0;max-width:1120px;border-radius:28px;overflow:hidden;aspect-ratio:16/8;min-height:300px;background:#000 url(img/hero.jpg) center 35%/cover no-repeat;box-shadow:0 24px 60px #1d2a5a33}
+@media (max-width:560px){header.hero{border-radius:20px;aspect-ratio:auto;height:360px;margin:12px 12px 0}}
+header.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#0b0b2a00 35%,#0b0b2ae6 100%)}
+.hero .txt{position:absolute;left:0;right:0;bottom:0;padding:28px 32px;z-index:1}
+.hero h1{font-weight:800;font-size:clamp(40px,7vw,82px);line-height:.95;color:var(--gold);text-shadow:0 4px 0 #b4120f,0 10px 30px #0009;letter-spacing:.5px}
+.hero h1 span{display:block;font-size:.5em;color:#fff;text-shadow:0 3px 0 var(--red),0 8px 24px #0009;margin-top:6px}
+.hero p{margin-top:10px;font-size:clamp(16px,2.2vw,21px);font-weight:600;color:#e9e7ff;max-width:640px}
+h2.sec{margin:40px 0 16px;font-size:28px;font-weight:800;display:flex;align-items:center;gap:10px;color:var(--ink)}
+h2.sec::before{content:'';width:10px;height:28px;border-radius:5px;background:linear-gradient(var(--gold),var(--red))}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.ep{background:var(--card);color:var(--ink);border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 14px 36px #1d2a5a1f;display:flex;flex-direction:column;transition:transform .2s ease}
+.ep:hover{transform:translateY(-3px);box-shadow:0 20px 44px #1d2a5a2e}
+.media{position:relative;aspect-ratio:16/9;background:#000;cursor:pointer;border:0;padding:0;display:block;width:100%}
+.media img{width:100%;height:100%;object-fit:cover;display:block}
+.media iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.play{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:var(--red);box-shadow:0 0 0 7px #ffffff66,0 10px 30px #0008;display:grid;place-items:center;transition:transform .15s ease}
+.play::after{content:'';border-left:26px solid #fff;border-top:16px solid transparent;border-bottom:16px solid transparent;margin-left:6px}
+.media:hover .play,.media:focus-visible .play{transform:scale(1.08)}
+.media:focus-visible{outline:4px solid var(--gold);outline-offset:-4px}
+.num{position:absolute;left:12px;top:12px;background:#fff;color:var(--blue);font-weight:800;font-size:16px;padding:3px 12px;border-radius:999px;box-shadow:0 4px 14px #0005}
+.dur{position:absolute;right:12px;bottom:12px;background:#000b;color:#fff;font-weight:700;font-size:14px;padding:2px 10px;border-radius:8px}
+.soon{position:absolute;inset:auto 0 0 0;background:#000a;color:#fff;font-weight:700;text-align:center;padding:8px}
+.body{padding:16px 18px 20px}
+.body h3{font-size:24px;font-weight:800;line-height:1.1;color:var(--ink)}
+.body p{margin-top:6px;color:var(--muted);font-size:16.5px;font-weight:500}
+.links{margin-top:10px;font-size:14px;font-weight:700}
+.links a{color:var(--blue);text-decoration:none}
+footer{margin:48px 0 32px;text-align:center;color:var(--muted);font-size:15px;font-weight:600}
+footer a{color:var(--blue)}
+</style>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<header class="hero">
+  <div class="txt">
+    <h1>SUPER ZAYN <span>va Chaqmoq</span></h1>
+    <p>Zayn haqida oilaviy multfilm: haqiqiy suratlar, videolar va ertak — gapiradigan moshina Chaqmoq bilan birga.</p>
+  </div>
+</header>
+<main class="wrap">
+  <h2 class="sec">Barcha qismlar</h2>
+  <div class="grid" id="grid"></div>
+  <footer>
+    <p>Zaynning oilasi uchun · 2026</p>
+    <p id="backup"></p>
+  </footer>
+</main>
+<script>
+/* YouTube ID — после загрузки роликов «по ссылке» вписать сюда (часть ссылки после v= или youtu.be/) */
+const EPISODES = [
+  { n: 1, yt: 'JE_1P0Htygc', title: 'Super Zayn va Chaqmoq', dur: '2:23', img: 'img/ep1.jpg',
+    text: 'Zayn tug‘ilganidan bugungacha: birinchi moshina, sayohatlar va gapiradigan moshina Chaqmoq bilan tanishuv. Super Zayn mushukchani qutqaradi!' },
+  { n: 2, yt: 'Z9IBrtyR_vQ', title: 'Mehmonlar keldi!', dur: '2:31', img: 'img/ep2.jpg',
+    text: 'Osiyo va Sora mehmonga kelishdi! Shamol varrakni uchirib ketdi — Super Zayn uni qaytarib keladi. Oyijon esa osh damladi.' },
+  { n: 3, yt: 'pJjU9zNqkjk', title: 'Oyimga sovg‘a!', dur: '3:03', img: 'img/ep3.jpg',
+    text: 'Zayn va oyisi Barno: eng yoqimli xotiralar. Super Zayn tog‘dan gul olib keladi va qo‘zichoqni onasiga qaytaradi.' },
+  { n: 4, yt: 'ArlYqA6LQw8', title: 'Ada bilan poyga!', dur: '3:21', img: 'img/ep4.jpg',
+    text: 'Zayn adasi bilan poygaga chiqadi! Havo sharida uchib ketgan kuchukchani qutqaradi — va ikkalasi ham g‘olib!' }
+];
+const BACKUP = '';   // ссылка на папку с исходными MP4 (Google Drive) — запасная копия
+
+const grid = document.getElementById('grid');
+for (const e of EPISODES) {
+  const el = document.createElement('article'); el.className = 'ep';
+  el.innerHTML =
+    '<button class="media" type="button" aria-label="' + e.n + '-qism: ' + e.title + ' — ko‘rish">' +
+      '<img src="' + e.img + '" alt="" loading="lazy" width="960" height="535">' +
+      '<span class="num">' + e.n + '-qism</span><span class="dur">' + e.dur + '</span>' +
+      (e.yt ? '<span class="play" aria-hidden="true"></span>' : '<span class="soon">Tez orada</span>') +
+    '</button>' +
+    '<div class="body"><h3>' + e.title + '</h3><p>' + e.text + '</p>' +
+      (e.yt ? '<div class="links"><a href="https://youtu.be/' + e.yt + '" target="_blank" rel="noopener">YouTube’da ochish ↗</a></div>' : '') +
+    '</div>';
+  const m = el.querySelector('.media');
+  m.addEventListener('click', () => {
+    if (!e.yt || m.querySelector('iframe')) return;
+    const f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + e.yt + '?autoplay=1&rel=0&playsinline=1';
+    f.title = e.n + '-qism: ' + e.title; f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen = true;
+    m.appendChild(f); m.style.cursor = 'default';
+  });
+  grid.appendChild(el);
+}
+if (BACKUP) document.getElementById('backup').innerHTML = '<a href="' + BACKUP + '" target="_blank" rel="noopener">Asl fayllar (zaxira nusxa)</a>';
+</script>
+</body>
+</html>
