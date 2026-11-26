@@ -161,7 +161,7 @@ h2.big .blue{background:var(--grad2);-webkit-background-clip:text;background-cli
 .real{padding:100px 20px 40px}
 .bento{margin-top:34px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;grid-auto-flow:dense;gap:16px}
 .tile{position:relative;border-radius:24px;overflow:hidden;background:#dde3f5;box-shadow:0 16px 40px rgba(20,30,90,.1)}
-.tile img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.tile img{width:100%;height:100%;object-fit:cover;object-position:50% 28%;transition:transform 1.2s var(--ease)}
 .tile:hover img{transform:scale(1.07)}
 .tile .cap{position:absolute;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 12px;border-radius:16px;background:rgba(255,255,255,.75);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);font-weight:700;font-size:14px;line-height:1.2}
 .tile .cap small{color:var(--muted);font-weight:700;white-space:nowrap}
@@ -292,7 +292,7 @@ dialog.cinema::backdrop{background:rgba(8,10,30,.72);backdrop-filter:blur(14px);
   <div data-r><span class="kick">Haqiqiy hayotda</span><h2 class="big">Ertakdagi qahramon — <span class="blue">hayotda ham!</span></h2><p class="sub-p">Super Zayn — o‘ylab topilgan qahramon emas. U haqiqatda bor, kuladi, yuguradi va moshinalarni yaxshi ko‘radi.</p></div>
   <div class="bento" id="bento">
     <div class="tile idt" data-r>
-      <div class="ph"><img src="img/real/zayn_id.jpg" alt="Zayn kulib turibdi" width="520" height="693" loading="lazy"></div>
+      <div class="ph"><img src="img/real/zayn_id.jpg" alt="Zayn kulib turibdi" width="900" height="1200" loading="lazy"></div>
       <div>
         <h3>Super Zayn</h3><span class="badge">QAHRAMON № 1</span>
         <dl>
@@ -362,10 +362,11 @@ const EP = [
     friend: ['Kuchukcha', 'img/f_puppy.jpg'] }
 ];
 const REAL = [
-  ['a01', 'Yulduzcha tushdi!', '2022', 't-tall'], ['a03', 'Shunday tabassum!', '2024', ''], ['a04', 'Birinchi moshina', '2024', ''],
-  ['a10', 'Oyimga gul', '2026', 't-big'], ['a02', 'Birinchi sayrlar', '2023', ''], ['a07', '2 yosh!', 'tug‘ilgan kun', 't-tall'],
-  ['a05', 'Samolyotda', 'sayohat', ''], ['a09', '3 yosh — sham puflash!', 'tug‘ilgan kun', ''], ['a11', 'Ada bilan', '2026', ''],
-  ['a06', 'Kichkina poygachi', 'velosiped', ''], ['a08', 'Qorli qish', 'qish', 't-tall'], ['a12', 'Super Zayn!', '2026', 't-big']
+  ['b07', 'Super yulduz 😎', '2025', 't-big'], ['b01', 'Birinchi kulgilar', '2023', ''], ['b05', 'Ayiqchali tabassum', '2024', ''],
+  ['b03', 'Quyoshli kun', '2024', 't-tall'], ['b10', 'Salom, dunyo!', '2025', 't-big'], ['b02', 'Birinchi Yangi yil', '2023', 't-tall'],
+  ['b06', 'Kichkina sehrgar', '2024', ''], ['b08', 'Rrr! Dinozavr', '2025', ''], ['b11', 'Gulli kun', '2026', 't-tall'],
+  ['b04', 'Yangi yil kechasi', '2024', ''], ['b12', 'Yosh bog‘bon', '2026', ''], ['b09', 'Kichkina janob', '2025', 't-tall'],
+  ['b13', 'Olim bola', '2026', ''], ['b14', 'Shunday tabassum!', '2026', '']
 ];
 const WHO = {
   zayn: ['Super Zayn', 'Qizil plashli qahramon. Moshinalar va poygani juda yaxshi ko‘radi.', .53, .56],
@@ -415,7 +416,7 @@ if (!RM && matchMedia('(hover:hover)').matches) document.querySelectorAll('.ep:n
 
 /* мозаика */
 const bento = $('#bento');
-REAL.forEach(([f, cap, sub, cls]) => bento.insertAdjacentHTML('beforeend', '<figure class="tile ' + cls + '" data-r><img src="img/real/' + f + '.jpg" alt="' + cap + '" width="640" height="800" loading="lazy"><figcaption class="cap">' + cap + '<small>' + sub + '</small></figcaption></figure>'));
+REAL.forEach(([f, cap, sub, cls]) => bento.insertAdjacentHTML('beforeend', '<figure class="tile ' + cls + '" data-r><img src="img/real/' + f + '.jpg" alt="' + cap + '" width="900" height="1125" loading="lazy"><figcaption class="cap">' + cap + '<small>' + sub + '</small></figcaption></figure>'));
 
 /* герои */
 const stage = $('#stage'), info = $('#info'), infom = $('#infom'), chips = $('#chips');
